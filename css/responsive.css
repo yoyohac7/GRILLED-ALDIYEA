@@ -1,0 +1,149 @@
+@media (max-width: 1300px) {}
+
+@media (max-width: 1120px) {
+  .slider_section .detail-box h1 {
+    font-size: 2.2rem;
+  }
+  .slider_section .detail-box p {
+    font-size: 15px;
+  
+  }
+
+}
+
+@media (max-width: 992px) {
+  .hero_area {
+    min-height: auto;
+  }
+
+  
+  .background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .custom_nav-container .navbar-nav {
+    padding-top: 15px;
+    padding-left: 0;
+    align-items: center;
+  }
+
+  .user_option{
+    justify-content: center;
+    margin-top: 15px;
+  }
+  .custom_nav-container .navbar-nav .nav-item .nav-link {
+    padding: 5px 25px;
+    margin: 5px 0;
+  }
+
+  .slider_section .carousel-indicators {
+    margin-top: 45px;
+  }
+
+
+
+
+  .food_section{
+    margin-top: 100px;
+  }
+  .food_section .box-content .detail-box {
+    padding: 15px;
+    
+  }
+  .food_section .filters_menu li {
+    font-size: 15px;
+    padding: 7px 9px;
+  }
+  .collections .item .down-content h4 {
+    font-size: 15px;
+
+  }
+  .collections .item span {
+    font-size: 13px;
+  }
+  
+  .collections .item span strong {
+    font-size: 14px;
+  }
+
+  
+}
+
+@media (max-width: 767px) {
+
+  .slider_section .detail-box h1 {
+    font-size: 2rem;
+  }
+  .slider_section .detail-box p {
+    font-size: 14px;
+  
+  }
+  .food_section .box-content .detail-box {
+    padding: 13px;
+
+
+  }
+
+
+
+  .book_section .form_container {
+    margin-bottom: 45px;
+  }
+
+
+  .header_section .collapse .navbar-nav {
+    direction: ltr;
+  }
+
+
+  .food_section .box-content .detail-box p {
+    font-size: 14px;
+    height: 100px;
+  }
+  .food_section .box-content .detail-box h5 {
+    font-size: 17px;
+  }
+
+  
+  
+
+}
+
+@media (max-width: 576px) {
+  .food_section .box-content {
+    height: 380px;
+    margin-bottom: 60px;
+  }
+  .food_section .box-content .detail-box p {
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+ 
+  
+}
+
+@media (max-width: 430px) {
+
+}
+
+@media (max-width: 376px) {
+
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+
+@media (min-width:576px) and (max-width:991px) {
+  .rent_solution_container .col-md-4.col-sm-6 {
+    float: left;
+    width: 50%;
+  }
+}
