@@ -75,6 +75,9 @@
   .collections .item span strong {
     font-size: 14px;
   }
+  .navbar-brand .logo{
+    margin-left: -12vw;
+  }
 
   
 }
@@ -117,6 +120,7 @@
   .food_section .box-content .detail-box h5 {
     font-size: 17px;
   }
+
 
   
   
