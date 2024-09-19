@@ -39,14 +39,17 @@ if (preloader) {
 // دوران العروض
 $(document).ready(function () {
   $('.owl-collection').owlCarousel({
-    items: 3,
+    items: 4,
     loop: true,
     dots: false,
     nav: true,
     autoplay: true,
-    margin: 20,
+    margin: 10,
     responsive: {
       0: {
+        items: 1
+      },
+      465: {
         items: 2
       },
       800: {
