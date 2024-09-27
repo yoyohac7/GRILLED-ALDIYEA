@@ -1,4 +1,4 @@
-// صفحة الانتظار اثناء تحميل عناصر الصفحة
+// صفحة الانتظار أثناء تحميل عناصر الصفحة
 const preloader = document.querySelector('#preloader');
 if (preloader) {
   window.addEventListener('load', () => {
@@ -6,35 +6,33 @@ if (preloader) {
   });
 }
 
-    // فلترة اصناف الطعام 
-    $(window).on('load', function () {
-      $('.filters_menu li').click(function () {
-        var filter = $(this).data('filter');
+// فلترة أصناف الطعام
+$(window).on('load', function () {
+  $('.filters_menu li').click(function () {
+    var filter = $(this).data('filter');
 
-        $('.filters_menu li').removeClass('active');
-        $(this).addClass('active');
+    $('.filters_menu li').removeClass('active');
+    $(this).addClass('active');
 
-        if (filter === '*') {
-          $('.box').show();
-        } else {
-          $('.box').hide();
-          $(filter).show();
-        }
-      });
+    if (filter === '*') {
+      $('.box').show();
+    } else {
+      $('.box').hide();
+      $(filter).show();
+    }
+  });
 
-      var $grid = $(".grid").isotope({
-        itemSelector: ".box",  
-        percentPosition: false,
-        masonry: {
-          columnWidth: ".box"  
-        }
-      });
+  var $grid = $(".grid").isotope({
+    itemSelector: ".box",
+    percentPosition: false,
+    masonry: {
+      columnWidth: ".box"
+    }
+  });
 
-      // العرض التلقائي لكل اصناف الطعام
-      $('.filters_menu li.active').click();
-    });
-
-
+  // العرض التلقائي لكل أصناف الطعام
+  $('.filters_menu li.active').click();
+});
 
 // دوران العروض
 $(document).ready(function () {
@@ -44,7 +42,8 @@ $(document).ready(function () {
     dots: false,
     nav: true,
     autoplay: true,
-    margin: 10,
+    margin: 30,
+    rtl: true,
     responsive: {
       0: {
         items: 1
@@ -62,10 +61,7 @@ $(document).ready(function () {
   });
 });
 
-
-
 // زر الصعود
-
 let scrollTop = document.querySelector('.scroll-top');
 
 function toggleScrollTop() {
@@ -73,6 +69,7 @@ function toggleScrollTop() {
     window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
   }
 }
+
 scrollTop.addEventListener('click', (e) => {
   e.preventDefault();
   window.scrollTo({
@@ -83,3 +80,20 @@ scrollTop.addEventListener('click', (e) => {
 
 window.addEventListener('load', toggleScrollTop);
 document.addEventListener('scroll', toggleScrollTop);
+
+// حق عرض الصور
+function initSwiper() {
+  document.querySelectorAll(".init-swiper").forEach(function (swiperElement) {
+    let config = JSON.parse(
+      swiperElement.querySelector(".swiper-config").innerHTML.trim()
+    );
+
+    if (swiperElement.classList.contains("swiper-tab")) {
+      initSwiperWithCustomPagination(swiperElement, config);
+    } else {
+      new Swiper(swiperElement, config);
+    }
+  });
+}
+
+window.addEventListener("load", initSwiper);

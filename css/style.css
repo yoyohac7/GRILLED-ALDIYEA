@@ -6,16 +6,16 @@ body {
 }
 :root{
   --main-color: #cc2626;
-  --srcound-color:aliceblue;
+  --secound-color:aliceblue;
 }
 
 h1,
 h2,
 h3,h4,h5 {
-  font-family: "El Messiri", sans-serif;
+  font-family: "El Messiri", "Open Sans", sans-serif;
 }
 p{
-  font-family: "El Messiri", sans-serif;
+  font-family: "El Messiri", "Open Sans", sans-serif, "El Messiri";
 }
 
 
@@ -74,10 +74,17 @@ a:focus {
 }
 .bg-box img {
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 400px;
+  object-fit: cover;
 }
+.bg-box .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  background-color: rgba(0, 0, 0, 0.7);
+} 
 
 .sub_page .hero_area .bg-box {
   position: absolute;
@@ -150,7 +157,7 @@ a:focus {
   margin: 0 10px;
 }
 .user_option a i{
-  color: var(--srcound-color);
+  color: var(--secound-color);
   font-size: 25px;
 }
 .user_option a i:hover{
@@ -413,7 +420,7 @@ a:focus {
 
 .food_section .box-content .options a i {
 
-    color: var(--srcound-color);
+    color: var(--secound-color);
     font-size: 25px;
  
 }
@@ -479,7 +486,7 @@ a:focus {
   margin-bottom: 20px;
   padding-bottom: 20px;
   text-align: right;
-  color: var(--srcound-color);
+  color: var(--secound-color);
 }
 
 .collections .item {
@@ -487,7 +494,7 @@ a:focus {
 }
 
 .collections .item span {
-  color: var(--srcound-color);
+  color: var(--secound-color);
   display: inline-block;
   width: 48%;
   font-size: 15px;
@@ -515,8 +522,8 @@ a:focus {
 }
 
 .collections .item .main-button a:hover {
-  background-color: var(--srcound-color);
-  border: 1px solid --srcound-color;
+  background-color: var(--secound-color);
+  border: 1px solid --secound-color;
   color: var(--main-color);
 }
 
@@ -547,7 +554,7 @@ a:focus {
   font-size: 24px;
   display: inline-block;
   color: var(--main-color);
-  background-color: var(--srcound-color);
+  background-color: var(--secound-color);
   border-radius: 50%;
   opacity: 1;
   transition: all .3s;
@@ -560,7 +567,7 @@ a:focus {
 
 .main-button a {
   font-size: 14px;
-  color: var(--srcound-color);
+  color: var(--secound-color);
   background-color: var(--main-color);
   border: 1px solid --main-color;
   padding: 12px 30px;
@@ -577,7 +584,7 @@ a:focus {
 .main-button a:after {
   width: 78%;
   height: 2px;
-  background-color: var(--srcound-color);
+  background-color: var(--secound-color);
   content: '';
   position: absolute;
   left: 50%;
@@ -588,7 +595,7 @@ a:focus {
 .main-button a:hover {
   background-color: #593c3c;
   color: var(--main-color);
-  border: 1px solid var(--srcound-color);
+  border: 1px solid var(--secound-color);
 }
 
 
@@ -628,6 +635,28 @@ a:focus {
   position: relative;
   z-index: 1;
 }
+.owl-dots {
+  margin-top: 24px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.owl-dot {
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #CCCCCC;
+  border-radius: 15px;
+  transition: .5s;
+}
+
+.owl-dot.active {
+  background: var(--main-color);
+  border-color: var(--main-color);
+}
+
 
 .owl-carousel .owl-stage {
   position: relative;
@@ -727,6 +756,7 @@ a:focus {
 
 .caviar-testimonials-area{
   margin-bottom: 50px;
+  
 }
 .caviar-testimonials-area .section-heading{
   font-size: 2.5rem;
@@ -734,6 +764,45 @@ a:focus {
 .caviar-testimonials-area .section-heading span{
   color: var(--main-color);
 }
+
+.con-btn{
+  text-align: center;
+  margin-top: 60px;
+}
+.caviar-btn {
+  /* transform: translate(430px,20px); */
+  min-width: 180px;
+  direction: rtl;
+  height: 44px;
+  border: 1px solid #b2b2b2;
+  font-weight: 500;
+  background-color: #fff;
+  border-radius: 0;
+  padding: 0 30px;
+  line-height: 42px;
+  color: #000;
+  border-radius: 5px;
+}
+
+.caviar-btn:hover,
+.caviar-btn:focus {
+  color: var(--main-color);
+  font-weight: 500;
+}
+
+.caviar-btn > span {
+  width: 8px;
+  height: 8px;
+  background-color: var(--main-color);
+  display: inline-block;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+.caviar-btn:hover > span {
+
+  background-color: var(--secound-color);
+}
+
 .caviar-testimonials-area .caviar-testimonials-slides{
   text-align: right;
 }
@@ -785,7 +854,7 @@ a:focus {
 
 
 .Restaurant-branches  {
-  margin-top: 100px;
+  margin-top: 70px;
   margin-bottom: 100px;
 }
 .Restaurant-branches .col-lg-4 {
@@ -896,7 +965,7 @@ a:focus {
 .section-title p {
   color: #37373f;
   margin: 10px 0 0 0;
-  font-size: 48px;
+  font-size: 43px;
   font-weight: 500;
 }
 
@@ -1036,7 +1105,7 @@ a:focus {
   font-size: 14px;
   font-weight: 700;
   margin-bottom: 15px;
-  color: var(--srcound-color);
+  color: var(--secound-color);
 }
 
 .footer .address p {
@@ -1075,3 +1144,305 @@ a:focus {
   margin-top: 5px;
   font-size: 13px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ________________________________ */
+
+/* صفحة من نحن */
+
+
+.hero_area .title_section {
+  z-index: 999;
+  text-align: center;
+  color: var(--secound-color);
+  margin-top: 80px;
+
+}
+.hero_area .title_section h1{
+  font-size: 55px;
+  margin-right: -40px;
+}
+.hero_area .title_section p {
+  display: inline;
+}
+.hero_area .title_section p a{
+  color: var(--main-color);
+}
+
+
+
+.why-us{
+  margin-top: 120px;
+  margin-bottom: 80px;
+  text-align: right;
+}
+.why-us .col-xl-4{
+  margin-bottom: 10px;
+}
+
+.why-us .why-box {
+color: #ffffff;
+background: #ce1212;
+padding: 30px;
+/* height: 350px; */
+}
+
+.why-us .why-box h3 {
+color: #ffffff;
+font-family: #212529;
+font-weight: 700;
+font-size: 30px;
+margin-bottom: 30px;
+}
+
+.why-us .why-box p {
+margin-bottom: 30px;
+}
+
+.why-us .why-box .more-btn {
+display: inline-block;
+background: color-mix(in srgb, #ffffff, transparent 85%);
+padding: 8px 40px 10px 40px;
+color: #ffffff;
+transition: all ease-in-out 0.4s;
+border-radius: 50px;
+text-decoration: none;
+transition: 0.3s;
+}
+.why-us .why-box .more-btn:hover {
+color: color-mix(in srgb, #ce1212, transparent 25%);
+text-decoration: none;
+}
+
+.why-us .why-box .more-btn i {
+font-size: 22px;
+transform: translate(0, 5px);
+}
+
+
+.why-us .why-box .more-btn:hover {
+color: #ce1212;
+background: #ffffff;
+}
+
+.why-us .icon-box {
+background-color: #ffffff;
+text-align: center;
+padding: 10px 15px;
+width: 100%;
+height: 100%;
+border: 1px solid color-mix(in srgb, #212529, transparent 90%);
+
+}
+
+.why-us .icon-box i {
+color: #ce1212;
+font-size: 32px;
+margin-bottom: 30px;
+background: color-mix(in srgb, #ce1212, transparent 95%);
+border-radius: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 72px;
+height: 72px;
+transition: 0.3s;
+}
+
+.why-us .icon-box h4 {
+font-size: 20px;
+font-weight: 500;
+margin: 0 0 30px 0;
+}
+
+.why-us .icon-box p {
+font-size: 15px;
+color: color-mix(in srgb, #212529, transparent 30%);
+}
+
+.why-us .icon-box:hover i {
+color: #ffffff;
+background: #ce1212;
+}
+
+
+
+
+
+
+
+
+
+
+/* صور المحلات  والعناوين */
+
+
+
+
+    
+.gallery {
+  overflow: hidden;
+}
+
+.gallery .swiper-wrapper {
+  height: auto;
+}
+
+.gallery .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.gallery .swiper-pagination .swiper-pagination-bullet {
+  background-color: color-mix(in srgb, #212529, transparent 85%);
+  border: 0;
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+}
+
+.gallery .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #ce1212;
+  opacity: 1;
+}
+
+
+
+.gallery .swiper-slide-active {
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .gallery .swiper-wrapper {
+    padding: 40px 0;
+  }
+
+  .gallery .swiper-slide-active {
+    background: #ffffff;
+    border: 6px solid #ce1212;
+    padding: 4px;
+    z-index: 1;
+    transform: scale(1.1);
+    transition: none;
+  }
+}
+
+
+.contact  {
+  margin: 40px 0px;
+}
+.contact .info-item {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+  text-align: right;
+  margin: 5px;
+}
+
+.contact .info-item .icon {
+  color: #ffffff;
+  background-color: #ce1212;
+  width: 56px;
+  height: 56px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  border-radius: 50%;
+  margin-left: 15px;
+}
+
+.contact .info-item h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+  color: color-mix(in srgb, #212529, transparent 30%);
+}
+
+.contact .info-item p {
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contact .php-email-form {
+  background-color:#ffffff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-top:90px;
+}
+
+@media (max-width: 575px) {
+  .contact .php-email-form {
+    padding: 20px;
+  }
+}
+
+.contact .php-email-form input[type=text],
+.contact .php-email-form textarea {
+  color:  #212529;
+  background-color: color-mix(in srgb, #ffffff, transparent 50%);
+  border-color: color-mix(in srgb,  #212529, transparent 80%);
+  font-size: 14px;
+  padding: 20px 15px;
+  box-shadow: none;
+  border-radius: 0;
+  margin-bottom:20px ;
+}
+
+.contact .php-email-form textarea {
+  height: 200px;
+  resize: none;
+}
+
+.contact .php-email-form input[type=text]:focus,
+.contact .php-email-form textarea:focus {
+  border-color: #ce1212;
+}
+
+.contact .php-email-form input[type=text]::placeholder,
+.contact .php-email-form textarea::placeholder {
+  color: color-mix(in srgb,  #212529, transparent 70%);
+}
+
+.contact .php-email-form button[type=submit] {
+  color: #ffffff;
+  background: #ce1212;
+  border: 0;
+  padding: 10px 30px;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.contact .php-email-form button[type=submit]:hover {
+  background: color-mix(in srgb, #ce1212, transparent 20%);
+}
+ 

@@ -32,6 +32,7 @@
             autoplay: true,
             smartSpeed: 1500,
             margin: 0,
+            rtl:true,
             center: true,
             responsive: {
                 0: {
